@@ -23,7 +23,7 @@ define(function(require) {
 
         // Private methods
         function handleError(response) {
-            return ( $q.reject({}) );
+            return($q.reject({}));
         }
 
         function handleSuccess(response) {
