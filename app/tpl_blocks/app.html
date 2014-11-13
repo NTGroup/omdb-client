@@ -2,8 +2,8 @@
     <div class="header">
         <nav>
             <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a ui-sref="app.main">Главная</a></li>
-                <li role="presentation"><a ui-sref="app.about"href="#">О проекте</a></li>
+                <li role="presentation" ui-sref-active="active" class="active"><a ui-sref="app.main">Главная</a></li>
+                <li role="presentation"  ui-sref-active="active"><a ui-sref="app.about">О проекте</a></li>
             </ul>
         </nav>
         <h3 class="text-muted">OMDB test</h3>
@@ -12,6 +12,6 @@
     <div ui-view></div>
 
     <footer class="footer">
-        <p>&copy; Company 2014</p>
+        <p>&copy; NTGroup 2014</p>
     </footer>
 </div> <!-- /container -->

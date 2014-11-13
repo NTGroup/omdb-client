@@ -1,3 +1,39 @@
-<div class="jumbotron">
-
+<div ng-controller="omdb.controller.main">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-7">
+                <div translate="page.main.title">Название</div>
+                <input type="text" ng-model="search.title" class="form-control" />
+            </div>
+            <div class="col-sm-3">
+                <div translate="page.main.year">Год</div>
+                <input type="text" ng-model="search.year" class="form-control" />
+            </div>
+            <div class="col-sm-2">
+                <div>&nbsp;</div>
+                <button ng-click="doSearch()" translate="page.main.doSearch" class="form-control">Искать</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel" ng-if="status == 'error'">
+        <div class="panel-body">
+            <h4 translate="page.main.error">Во время выполнения запроса произошла ошибка</h4>
+            <div ng-if="errorMessage != null">{{errorMessage}}</div>
+        </div>
+    </div>
+    <div class="panel" ng-if="movies.length > 0">
+        <div class="panel-heading"><b translate="page.main.found">Найдено:</b> {{movies.length}}</div>
+        <div class="panel-body">
+            <table class="table table-responsive table-bordered table-hover">
+                <tr>
+                    <th translate="page.main.title">Название</th>
+                    <th translate="page.main.year">Год</th>
+                </tr>
+                <tr ng-repeat="movie in movies">
+                    <td>{{movie.Title}}</td>
+                    <td>{{movie.Year}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
