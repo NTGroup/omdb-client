@@ -1,19 +1,21 @@
 <div ng-controller="omdb.controller.main">
     <div class="jumbotron">
-        <div class="row">
-            <div class="col-sm-7">
-                <div translate="page.main.title">Название</div>
-                <input type="text" ng-model="search.title" class="form-control" />
+        <form ng-submit="doSearch()">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div translate="page.main.title">Название</div>
+                    <input type="text" ng-model="search.title" class="form-control" />
+                </div>
+                <div class="col-sm-3">
+                    <div translate="page.main.year">Год</div>
+                    <input type="text" ng-model="search.year" class="form-control" />
+                </div>
+                <div class="col-sm-2">
+                    <div>&nbsp;</div>
+                    <button type="submit" translate="page.main.doSearch" class="form-control">Искать</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <div translate="page.main.year">Год</div>
-                <input type="text" ng-model="search.year" class="form-control" />
-            </div>
-            <div class="col-sm-2">
-                <div>&nbsp;</div>
-                <button ng-click="doSearch()" translate="page.main.doSearch" class="form-control">Искать</button>
-            </div>
-        </div>
+        </form>
     </div>
     <div class="panel panel-danger" ng-if="status == 'error'">
         <div class="panel-body bg-danger">
