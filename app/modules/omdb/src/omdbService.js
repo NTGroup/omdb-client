@@ -14,7 +14,11 @@ define(function(require) {
         }
 
         this.getMovieById = function(id) {
+            var url = 'http://www.omdbapi.com/?r=json&plot=full';
+            url += '&i=' + id;
 
+            var request = $http.get(url);
+            return (request.then(handleSuccess, handleError));
         }
 
         // Private methods

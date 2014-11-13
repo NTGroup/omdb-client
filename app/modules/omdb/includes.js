@@ -3,5 +3,6 @@ define(function(require) {
 
     require('config!main')(module);
     require('controller!main');
+    require('controller!movie');
     require('service!omdbService');
 });

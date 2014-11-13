@@ -1,0 +1,23 @@
+<div ng-controller="omdb.controller.movie">
+    <div ng-if="error" class="panel panel-danger">
+        <div class="panel-body bg-danger" translate="page.movie.error.{{error}}"></div>
+    </div>
+    <div ng-if="movie != null">
+        <h2>{{movie.Title}} ({{movie.Year}})</h2>
+        <hr/>
+        <div class="row">
+            <div class="col-lg-6"><img ng-src="{{movie.Poster}}"></div>
+            <div class="col-lg-6 movieDetails">
+                <div><b translate="page.movie.country">Country</b>: {{movie.Country}}</div>
+                <div><b translate="page.movie.genre">Genre</b>: {{movie.Genre}}</div>
+                <div><b translate="page.movie.released">Released</b>: {{movie.Released}}</div>
+                <div><b translate="page.movie.runtime">Runtime</b>: {{movie.Runtime}}</div>
+                <div><b translate="page.movie.director">Director</b>: {{movie.Released}}</div>
+                <div><b translate="page.movie.writer">Writer</b>: {{movie.Writer}}</div>
+                <div><b translate="page.movie.stars">Stars</b>: {{movie.Actors}}</div>
+                <div><b translate="page.movie.rating">Rating</b>: {{movie.imdbRating}} / 10</div>
+            </div>
+        </div>
+        <p>{{movie.Plot}}</p>
+    </div>
+</div>
