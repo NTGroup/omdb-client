@@ -1,0 +1,34 @@
+{
+    "menu": {
+        "main": "Search",
+        "about": "About"
+    },
+    "page": {
+        "main": {
+            "title": "Title",
+            "year": "Year",
+            "doSearch": "Search",
+            "error": "An error occured",
+            "found": "Movies found:"
+        },
+        "movie": {
+            "country": "Country",
+            "genre": "Genre",
+            "released": "Released",
+            "runtime": "Runtime",
+            "director": "Director",
+            "writer": "Writer",
+            "stars": "Stars",
+            "rating": "IMDb rating",
+            "error": {
+                "notFound": "Unknown ID",
+                "networkError": "Network error",
+                "emptyId": "Empty ID"
+            }
+        },
+        "about": {
+            "title": "About project",
+            "content": "Test job for NTGroup"
+        }
+    }
+}

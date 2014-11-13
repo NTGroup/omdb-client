@@ -1,0 +1,37 @@
+<div ng-controller="omdb.controller.main">
+    <div class="jumbotron">
+        <form ng-submit="doSearch()">
+            <div class="row">
+                <div class="col-sm-10">
+                    <div translate="page.main.title">Название</div>
+                    <input type="text" ng-model="search" class="form-control" />
+                </div>
+                <div class="col-sm-2">
+                    <div>&nbsp;</div>
+                    <button type="submit" translate="page.main.doSearch" class="form-control">Искать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="panel panel-danger" ng-if="status == 'error'">
+        <div class="panel-body bg-danger">
+            <h4 translate="page.main.error">Во время выполнения запроса произошла ошибка</h4>
+            <div ng-if="errorMessage != null">{{errorMessage}}</div>
+        </div>
+    </div>
+    <div class="panel" ng-if="movies.length > 0">
+        <div class="panel-heading"><b translate="page.main.found">Найдено:</b> {{movies.length}}</div>
+        <div class="panel-body">
+            <table class="table table-responsive table-bordered table-hover">
+                <tr>
+                    <th translate="page.main.title">Название</th>
+                    <th translate="page.main.year">Год</th>
+                </tr>
+                <tr ng-repeat="movie in movies">
+                    <td><a ui-sref="app.movie({id: movie.imdbID})">{{movie.Title}}</a></td>
+                    <td>{{movie.Year}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{
+    "name": "ntgroup",
+    "version": "0.0.0",
+    "homepage": "https://github.com/primebit/omdb-client",
+    "authors": [
+        "primebit <redlinesoft@yandex.ru>"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "requirejs": "*",
+        "requirejs-text": "*",
+        "requirejs-angular-loader": "*",
+        "bootstrap": "~3.2",
+        "font-awesome": "~4.2.0",
+        "angular": "~1.3.0",
+        "angular-cookies": "~1.3.0",
+        "angular-resource": "~1.3.0",
+        "ngstorage": "~0.3.0",
+        "angular-bootstrap": "*",
+        "angular-ui-utils": "~0.1.1",
+        "angular-ui-router": "~0.2.11",
+        "angular-translate": "*",
+        "angular-translate-storage-local": "*",
+        "angular-translate-loader-static-files": "*",
+        "angular-i18n": "*",
+        "angular-dynamic-locale": "*"
+    }
+}
